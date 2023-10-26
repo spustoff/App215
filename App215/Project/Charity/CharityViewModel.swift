@@ -14,6 +14,8 @@ final class CharityViewModel: ObservableObject {
     @Published var text: String = ""
     @Published var need: String = ""
     
+    @Published var isAdd: Bool = false
+    
     @Published var charities: [CharityModel] = []
     
     func addCharity(completion: @escaping () -> (Void)) {

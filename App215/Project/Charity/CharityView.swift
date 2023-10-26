@@ -31,7 +31,7 @@ struct CharityView: View {
                     
                     Button(action: {
                         
-                        
+                        viewModel.isAdd = true
                         
                     }, label: {
                         
@@ -109,6 +109,10 @@ struct CharityView: View {
             
             viewModel.fetchCharities()
         }
+        .sheet(isPresented: $viewModel.isAdd, content: {
+            
+            CharityAdd(viewModel: viewModel)
+        })
     }
 }
 
